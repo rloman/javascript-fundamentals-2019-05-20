@@ -56,6 +56,15 @@ function demo() {
 
     foo(null); //slecht
 
+    let floatje = 45.126;
+
+    console.log(typeof(floatje.toFixed(2)));
+
+    let afgerond = Math.round(floatje*100)/100; // op 2decimalen afronden, vandaar vermenigvuldigen met 100, dan afronden naar geheel getal en dan / 100 om weer de oorsponkelijke waarde, maar dan in 2 decimalen terug te krijgen.
+
+    console.log(afgerond);
+    console.log(typeof(afgerond));
+
 
 }
 
