@@ -1,15 +1,15 @@
 
 // this function alert hello
 function sayHello() {
-    alert("Hello");
+    window.alert("Hello");
+
+    var Hello = 3;
+    var hello = 4;
 }
 
 /*
-
 dit is hele lap tekst die je kunt invoeren 
-
-
 */
-function add(a, b) {
+function addTwoNumbers(a, b) {
     return a+b;
 }
