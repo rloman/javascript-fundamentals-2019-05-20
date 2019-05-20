@@ -17,6 +17,9 @@ function demo() {
         }
     }
 
+    // ternairy operator
+    let label = (age > 40) ? "Senior" : "Junior";
+
     // ander voorbeeld
 
     let male = true; // mannetje
