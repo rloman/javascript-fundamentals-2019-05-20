@@ -19,13 +19,11 @@ function changeColor(event) { // here, the event is the event what has happened.
 
 function setEventHandlersToSpans() {
 
-    let elements = [];
-    
-    document.getElementsByTagName("span").forEach(span => {
+    let spanList = document.getElementsByTagName("span");
+    for(let span of spanList) {
         span.addEventListener("click", function () {
             alert("you clicked a span");
-        }
-        );
-    });
+        });
+    }
 }
 
