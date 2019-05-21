@@ -1,6 +1,11 @@
 "use strict"
 
-function demo() {
+let rapportCijfer = readMark();
+
+console.log("Mijn rapportcijfer is: " + rapportCijfer);
+
+// this function reads AND RETURNS a valid mark (rapportcijfer)
+function readMark() {
 
     let number = 0;  // in fact an invalid number
     while (number < 1 || number > 10) {
@@ -17,9 +22,6 @@ function demo() {
         */
     }
 
-    console.log(number);
-
-    number = 0;
-
+    return number;
 }
 
