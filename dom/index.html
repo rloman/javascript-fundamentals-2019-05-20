@@ -11,9 +11,34 @@
 
        <button onclick="demo();">Click to see the flickr show</button>
 
-       <form name="data">
-        Address: <input id="address" name="address" value="Abbey road 42">
+       <form name="data" method="post" action="http://acme.com/schrijfIn"> <!-- 0-->
+        Address: <input id="addressId" name="address">
+      
+        <input type="submit" value="Submit">
+
+        <input type="reset" value="Schoon maken">
+    </form>
+
+       <form> <!-- 1 -->
+        Address: <input id="addressId" name="address" value="Torenstraat 44, Hengelo">
        </form>
+
+       <button onClick="document.location='http://www.computrain.nl'">Clear</button>
+
+       <div>
+           First div
+       </div>
+
+       <div>
+
+            Second div
+       </div>
+       <div>
+
+            Third div
+       </div>
+
+       <button onClick="yellow();">I love yellow!</button>
     </body>
 
 </html>
