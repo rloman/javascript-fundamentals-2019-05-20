@@ -1,0 +1,123 @@
+<html>
+
+<head>
+  <title>Exercise 13</title>
+
+  <script type="text/javascript">
+    function test() {
+
+      // toUppercase
+      {
+        testform.text1.value = testform.text1.value.toUpperCase();
+      }
+
+      // first three chars
+      {
+        testform.text2.value = testform.text2.value.substring(0, 3);
+      }
+
+      // last three chars
+      {
+        testform.text3.value = testform.text3.value.substr(
+          testform.text3.value.length-3, 3);
+      }
+
+      // reverse
+      testform.text4.value = testform.text4.value.split("").reverse().join("");
+
+      // square root
+      let numberValue = parseInt(testform.text5.value);
+      testform.text5.value = Math.sqrt(numberValue);
+
+    }    
+  </script>
+</head>
+
+<body>
+  <h2>
+    Exercise 13</h2>
+  <form action="" name="testform">
+    <table>
+      <tr>
+        <td>
+          Convert to uppercase:
+        </td>
+        <td>
+          <input type="text" name="text1" />
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Leave only the first three characters:
+        </td>
+        <td>
+          <input type="text" name="text2" />
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Leave only the last three characters:
+        </td>
+        <td>
+          <input type="text" name="text3" />
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Reverse this text:
+        </td>
+        <td>
+          <input type="text" name="text4" />
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Replace this number by its square root:
+        </td>
+        <td>
+          <input type="text" name="text5" />
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Put the current (local) date and time here:
+        </td>
+        <td>
+          <input type="text" name="text6" style="width:180pt" />
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Put the current year here:
+        </td>
+        <td>
+          <input type="text" name="text7" />
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Calculate how many complete days have elapsed since April 30, 2000:
+        </td>
+        <td>
+          <input type="text" name="text8" />
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Calculate how many seconds have elapsed since midnight:
+        </td>
+        <td>
+          <input type="text" name="text9" />
+        </td>
+      </tr>
+      <tr>
+        <td colspan="2" align="center">
+          <input type="button" style="font-size:larger" value="Try it!" onclick="test()" />
+        </td>
+      </tr>
+    </table>
+  </form>
+  This is the last line of the page
+</body>
+
+</html>

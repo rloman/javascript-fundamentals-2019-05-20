@@ -1,0 +1,108 @@
+<html>
+
+<head>
+  <title>Exercise 14</title>
+  <script type="text/javascript">
+
+  
+    function isValidLetter(ch) {
+      ch = ch.toLowerCase();
+      if (ch >= 'a' && ch <= 'z')
+        return true;
+      if (ch == '-' || ch == ' ')
+        return true;
+      return false;
+    }
+    function isValidName(name) {
+      for (var i = 0; i < name.length; i++) {
+        var c = name.charAt(i);
+        if (!isValidLetter(c)) {
+          return false;
+        }
+      }
+      return true;
+    }
+    function isValidAge(agetotest) {
+      if (isNaN(agetotest))
+        return false;
+      var age = parseFloat(agetotest);
+      return age >= 0 && age < 100;
+    }
+    function validate() {
+      let dataok = true;
+      let errorstring = "";
+      if (persondata.firstname.value.trim().length == 0
+        || !isValidName(persondata.firstname.value.trim())) {
+        dataok = false;
+        errorstring += "Field firstname should contain a valid name"
+      }
+
+      if (persondata.lastname.value.trim().length == 0
+        || !isValidName(persondata.lastname.value.trim())) {
+        dataok = false;
+        errorstring += "\n<br>Field lastname should contain a valid name"
+      }
+
+      if(!isValidAge(persondata.age.value)) {
+        dataok = false;
+        errorstring += "\n<br>Field age should contain an age between 0 and 100";
+      }
+
+      if (!dataok) {
+        document.getElementById("errorlist").innerHTML = errorstring;
+      }
+      return dataok;
+
+    }    
+  </script>
+</head>
+
+<body>
+  <h2>
+    Exercise 14</h2>
+  <form onSubmit="return validate();" action="success.html" name="persondata">
+    <table>
+      <tr>
+        <td>
+          First Name:
+        </td>
+        <td>
+          <input type="text" name="firstname" />
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Last Name:
+        </td>
+        <td>
+          <input type="text" name="lastname" />
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Postal Code:
+        </td>
+        <td>
+          <input type="text" name="postalcode" />
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Age
+        </td>
+        <td>
+          <input type="text" name="age" />
+        </td>
+      </tr>
+      <tr>
+        <td colspan="2" align="center">
+          <input type="submit" style="font-size: larger" name="submit" value="Submit data" />
+        </td>
+      </tr>
+    </table>
+    <div id="errorlist" style="font-weight: bold; color: red;">
+    </div>
+  </form>
+</body>
+
+</html>
