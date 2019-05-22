@@ -33,7 +33,9 @@ let sentence = "The quick brown is born on 09-08-1968 so is now 50 years old";
 
 re = /(\d{2})-(\d{2})-(\d{4})/;
 
-let [f, day, month, year] = re.exec(sentence);
+let [fullMatch, day, month, year] = re.exec(sentence);
+
+console.log(fullMatch);
 
 console.log(day);
 console.log(typeof(day));
