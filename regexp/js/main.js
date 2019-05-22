@@ -3,9 +3,9 @@
 
 // might use this for validation
 
-let postcode = "7603EC";
+let postcode = "7603EC"; // variable
 
-let re = /[1-9][0-9]{3}\s?[A-Z]{2}/;
+let re = /[1-9][0-9]{3}\s?[A-Z]{2}/; // reguliere expressie
 
 /* The re has a function test
     which expect a string as parameters and returns a boolean which is
@@ -13,10 +13,9 @@ let re = /[1-9][0-9]{3}\s?[A-Z]{2}/;
         false: when the valiation fails =>
 */
 
-console.log(re.test(postcode));
+console.log(re.test(postcode) == true);
 
 postcode ="aap";
-
 
 console.log(re.test(postcode));
 
