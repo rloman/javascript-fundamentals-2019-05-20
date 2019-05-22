@@ -13,7 +13,8 @@ function setEventHandlersToDivs() {
 
 function changeColor(event) { // here, the event is the event what has happened. In our case a mouse over on the div!!!
 
-    event.target.style.color = "red";
+    let divWaaropIsGeklikt = event.target;
+    divWaaropIsGeklikt.style.color = "red";
 
 }
 
